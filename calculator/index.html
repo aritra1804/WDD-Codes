@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body ng-app="calculatorApp" bgcolor="linen">
+  <div ng-controller="calculatorCtrl">
+    <div id="calculator">
+      <input type="text" ng-model="display" readonly>
+      <div id="buttons">
+        <button ng-click="addNumber(7)">7</button>
+        <button ng-click="addNumber(8)">8</button>
+        <button ng-click="addNumber(9)">9</button>
+        <button ng-click="clear()">C</button>
+        <button ng-click="addNumber(4)">4</button>
+        <button ng-click="addNumber(5)">5</button>
+        <button ng-click="addNumber(6)">6</button>
+        <button ng-click="addOperator('-')">-</button>
+        <button ng-click="addNumber(1)">1</button>
+        <button ng-click="addNumber(2)">2</button>
+        <button ng-click="addNumber(3)">3</button>
+        <button ng-click="addOperator('+')">+</button>
+        <button ng-click="addNumber(0)">0</button>
+        <button ng-click="addOperator('/')">/</button>
+        <button ng-click="addOperator('*')">*</button>
+        <button ng-click="calculate()">=</button>
+      </div>
+    </div>
+  </div>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

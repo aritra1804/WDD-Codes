@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Feedback System</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    
+    <div class="container">
+      <div class="row col-md-6 col-md-offset-3">
+        <div class="panel panel-primary">
+          <div class="panel-heading text-center">
+            <h1>Feedback System</h1>
+          </div>
+          <div class="panel-body">
+            <form action="connect.php" method="post">
+              <div class="form-group">
+                <label for="course" id="course" name="course">Select the Course:</label>
+                <br>
+                <select name="course" id="course" name="course" style="height: auto; width: auto;" required>
+                   <option value="physics">Physics</option>
+                    <option value="chemistry">Chemistry</option>
+                    <option value="maths">Mathematics</option>
+                    <option value="bio">Biology</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="instructor" id="instructor" name="instructor">Select Instructor Name:</label>
+                <br>
+                <select name="instructor" id="instructor" style="height: auto; width: auto;" required>
+                   <option value="john">John</option>
+                    <option value="henry">Henry</option>
+                    <option value="lewis">Lewis</option>
+                    <option value="sergio">Sergio</option>
+                    <option value="steve">Steve</option>
+                </select>
+              </div>
+            
+              <div class="form-group">
+                <label for="points">Course Rating:
+                  (between 1 and 5):</label>
+                  <br>
+                 <input type="range" id="crating" name="crating" min="1" max="5" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="points">Instructor Rating:
+                    (between 1 and 5):</label>
+                    <br>
+                   <input type="range" id="irating" name="irating" min="1" max="5" required>
+                  </div>
+
+
+              </div>
+              <div class="form-group">
+                <label for="firstName">Which activities in the classroom do you enjoy the most?</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="activity"
+                  name="activity"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="firstName">What motivates you to learn more?</label>
+                <br>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="motivate"
+                  name="motivate"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="lastName">Do you have supportive classmates?</label>
+                <br>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="support"
+                  name="support"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="gender" >Gender of Student:</label>
+                <div>
+                  <label for="male" class="radio-inline"
+                    ><input
+                      type="radio"
+                      name="gender"
+                      value="m"
+                      id="male"
+                      required
+                    />Male</label
+                  >
+                  <label for="female" class="radio-inline"
+                    ><input
+                      type="radio"
+                      name="gender"
+                      value="f"
+                      id="female"
+                      required
+                    />Female</label
+                  >
+                  <label for="others" class="radio-inline"
+                    ><input
+                      type="radio"
+                      name="gender"
+                      value="o"
+                      id="others"
+                      required
+                    />Others</label
+                  >
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <br>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  required
+                />
+              </div>
+              
+              <div class="form-group">
+                <label for="number">Phone Number</label>
+                <br>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="number"
+                  name="number"
+                  required
+                />
+                <br>
+               
+            </div>
+              <input type="submit" class="center-block" class="btn btn-primary" required/>
+            </form>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+</select>
+
+  
+</div>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta charset="UTF-8">
+    <title>Media Elements Exp 3</title>
+    <div>
+      <h1 class="topheader">WDD LAB 4</h2>
+      </div>
+      <style>
+body {  
+    background-color: linen;  
+}  
+      </style>
+      
+    <link rel = "stylesheet" type = "text/css" href = "style.css"/>
+    
+  </head>
+ 
+  <center>
+    <body id = "body">
+    <h1 id = "heading">Audio Element</h1>
+    <h2 style="color:rgba(169, 34, 19, 0.932);">Audio tags:</h2>
+    <p>The audio tag is used to embed sound content in a document, such as music or other audio streams. The audio tag contains one or more source tags with different audio sources. The browser will choose the first source it supports.</p>
+    <audio controls>
+      <source src="audio.mp3" type="audio/mpeg">     
+    </audio>
+   <hr>
+    <h1 id = "heading">Video Element</h1>
+    <h2 style="color:rgba(169, 34, 19, 0.932);">Video tags:</h2>
+    <p>The video tag is used to embed video content in a document, such as a movie clip or other video streams. The video tag contains one or more source tags with different video sources. The browser will choose the first source it supports.</p>
+    <video width="320" height="240" controls>
+      <source src="video.mp4" type="video/mp4">
+    </video>
+    <hr>
+    <h1 id = "heading">Embed Element</h1>
+    <h2 style="color:rgba(169, 34, 19, 0.932);">Embed tags:</h2>
+     <p>  The embed tag defines a container for an external resource, such as a web page, a picture, a media player, or a plug-in application.</p> 
+    
+    <embed src="https://en.wikipedia.org/wiki/Space" width="320" height="240" />
+<hr>
+    <h1 id = "heading">Track Element</h1>
+    <h2 style="color:rgba(169, 34, 19, 0.932);">Track elements:</h2>
+    <p>The track tag specifies text tracks for audio or video elements. This element is used to specify subtitles, caption files or other files containing text, that should be visible when the media is playing. Tracks are formatted in WebVTT format</p>
+    <video width="320" height="240" controls>
+      <source src="video.mp4" type="video/mp4">
+      <track src="captions.vtt" kind="captions" srclang="en" label="English">
+     
+    </video>
+     <hr>
+  </body>
+</center>
+</html>

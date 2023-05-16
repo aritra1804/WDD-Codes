@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+	<style>
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 50px;
+		}
+		input {
+			margin: 10px;
+			padding: 10px;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			width: 300px;
+		}
+		input.error {
+			border: 1px solid red;
+		}
+		.button {
+			margin: 10px;
+			padding: 10px;
+			border-radius: 5px;
+			background-color: #4CAF50;
+			color: white;
+			border: none;
+			width: 300px;
+			cursor: pointer;
+		}
+		.button:hover {
+			background-color: #3e8e41;
+		}
+		.error-message {
+			color: red;
+			font-size: 12px;
+			margin: 0;
+			padding: 0;
+		}
+	</style>
+</head>
+<body>
+	<form ng-app="myApp" ng-controller="myCtrl" ng-submit="login()">
+		<input type="text" ng-model="name" ng-class="{'error': nameError}" placeholder="Name" required>
+		<p class="error-message" ng-show="nameError">{{nameErrorMessage}}</p>
+		<input type="email" ng-model="email" ng-class="{'error': emailError}" placeholder="username" required>
+		<p class="error-message" ng-show="emailError">{{emailErrorMessage}}</p>
+		<input type="password" ng-model="password" ng-class="{'error': passwordError}" placeholder="Password" required>
+		<p class="error-message" ng-show="passwordError">{{passwordErrorMessage}}</p>
+		<button type="submit" class="button">Login</button>
+	</form>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+	<script>
+		var app = angular.module('myApp', []);
+		app.controller('myCtrl', function($scope) {
+			$scope.login = function() {
+				if(!$scope.name || $scope.name.length < 3 ) {
+					$scope.nameError = true;
+					$scope.nameErrorMessage = 'Name must be between greater than 3 characters';
+				} else {
+					$scope.nameError = false;
+				}
+				if(!$scope.email || !validateEmail($scope.email)) {
+					$scope.emailError = true;
+					$scope.emailErrorMessage = 'Please enter a valid email';
+				} else {
+					$scope.emailError = false;
+				}
+				if(!$scope.password || $scope.password.length < 6) {
+					$scope.passwordError = true;
+					$scope.passwordErrorMessage = 'Password must be at least 6 characters';
+				} else {
+					$scope.passwordError = false;
+				}
+				if(!$scope.nameError && !$scope.emailError && !$scope.passwordError) {
+					alert('Login successful!');
+				}
+			}
+
+			function validateEmail(email) {
+				var re = /\S+@\S+\.\S+/;
+				return re.test(email);
+			}
+		});
+	</script>
+</body>
+</html>

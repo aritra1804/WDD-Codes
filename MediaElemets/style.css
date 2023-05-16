@@ -1,0 +1,19 @@
+#heading {
+    /*For all the headings of the components*/
+    background-color: lightblue;
+    color: black;
+    padding: 40px;
+    text-align: center;
+  }
+  .topheader {
+    /*CSS style for header portion of page*/
+    background-color: AliceBlue;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-color: #0568AE;
+    border-width: 5px;
+    padding-left: 10px;
+    font-family: "Courier New", Courier, monospace;
+    text-align: center;
+  }
+    
